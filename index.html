@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asteroid</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Start Game Button -->
+  <div class="container" id="container">
+    <div class="scoreContainer">
+      <h1 class="best">Welcome</h1>
+      <p class="text">To Asteroid Game</p> 
+
+      <div class="btn">
+          <a class="btn" id="startGame" onclick="startGame()">Start</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="ctrlRight" onmousedown = "right()" onmouseup = "stopRight()"></div>
+    <div class="ctrlLeft" onmousedown = "left()" onmouseup = "stopLeft()"></div>
+    <div class="ctrlThrust" onmousedown = "thrust()" onmouseup = "stopThrust()"></div>
+    <div class="ctrlShoot" onmousedown = "shoot()" onmouseup = "stopShoot()"></div>
+
+    <!-- <div class="ctrlRight" onclick = "right()"></div>
+    <div class="ctrlLeft" onclick = "left()"></div>
+    <div class="ctrlThrust" onclick = "thrust()"></div>
+    <div class="ctrlShoot" onclick = "shoot()"></div> -->
+  </div>
+
+  <!-- Play / Pause -->
+  <div class="playContainer">
+    <div class="PlayPause" id="play">
+      <span class="play"></span>
+      <span class="play"></span>
+      <span class="play"></span>
+    </div>
+  </div>
+
+  <!-- Particles canvas -->
+  <canvas id="canvas1"></canvas>
+
+  <!-- game canvas -->
+  <canvas id="gameCanvas" class="game"></canvas>
+  <script src="particles.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

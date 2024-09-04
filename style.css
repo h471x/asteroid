@@ -1,0 +1,745 @@
+*{margin: 0;padding: 0;box-sizing: border-box;user-select: none;}body{overflow: hidden;background: #000; min-height: 100vh;top: 0;left: 0;width: 100%;height: 100%;user-select: none;}
+
+.controls{position: fixed;}
+
+/* right */
+
+.ctrlRight
+{
+    position: fixed;
+    display: table;
+    margin-top: 75vh;
+    margin-left: 22vw;
+    padding-left: 34px;
+    padding-right: 5px;
+    transform: scale(3);
+    visibility: hidden;
+}
+
+.ctrlRight::before
+{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border-radius: 34px;
+    /* transition: background O.5s, width 0.5s; */
+    transition: ease-in-out 0.1s;
+    transition-delay: 0.1s 0;
+    border: 2px solid #acadaf54;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ctrlRight:active::before, .ctrlRight.active::before
+{
+    background: #ffffff3b;
+    transition-delay: 0s, 0.1s;
+    cursor: pointer;
+    border: 2px solid #ffffffc0;
+}
+
+.ctrlRight::after
+{
+    content: '';
+    position: fixed;
+    top: 13px;/*13 for rightCtrl*/
+    left: 12px;/*12 for rightCtrl*/
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #00ffff54;
+    border-right: 2px solid #00ffff54;
+    transform: rotate(45deg);
+    transition: 0.1s;
+    transition-delay: 0s;
+    cursor: pointer;
+}
+
+.ctrlRight:active::after, .ctrlRight.active::after
+{
+    /* transition-delay: 0.5s; */
+    transform: rotate(45deg) scale(1.5);
+    cursor: pointer;
+    border-top: 2px solid #00ffff;
+    border-right: 2px solid #00ffff;
+}
+
+/* left */
+
+.ctrlLeft
+{
+    position: fixed;
+    display: table;
+    margin-top: 75vh;
+    margin-left: 5vw;
+    /* padding-left: 34px;
+    padding-right: 5px; */
+    transform: scale(3);
+    visibility: hidden;
+}
+
+.ctrlLeft::before
+{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border-radius: 34px;
+    /* transition: background O.5s, width 0.5s; */
+    transition: ease-in-out 0.1s;
+    transition-delay: 0.1s 0;
+    border: 2px solid #acadaf54;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ctrlLeft:active::before, .ctrlLeft.active::before
+{
+    background: #ffffff3b;
+    transition-delay: 0s, 0.1s;
+    cursor: pointer;
+    border: 2px solid #ffffffc0;
+}
+
+.ctrlLeft::after
+{
+    content: '';
+    position: fixed;
+    top: 13px;/*13 for rightCtrl*/
+    left: 14px;/*12 for rightCtrl*/
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #00ffff54;
+    border-right: 2px solid #00ffff54;
+    transform: rotate(225deg);
+    transition: 0.1s;
+    transition-delay: 0s;
+    cursor: pointer;
+}
+
+.ctrlLeft:active::after, .ctrlLeft.active::after
+{
+    /* transition-delay: 0.5s; */
+    transform: rotate(225deg) scale(1.5);
+    cursor: pointer;
+    border-top: 2px solid #00ffff;
+    border-right: 2px solid #00ffff;
+}
+
+/* Thrust */
+
+.ctrlThrust
+{
+    position: fixed;
+    display: table;
+    margin-top: 55vh;
+    margin-left: 85vw;
+    /* padding-left: 34px;
+    padding-right: 5px; */
+    transform: scale(3);
+    visibility: hidden;
+}
+
+.ctrlThrust::before
+{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border-radius: 34px;
+    /* transition: background O.5s, width 0.5s; */
+    transition: ease-in-out 0.1s;
+    transition-delay: 0.1s 0;
+    border: 2px solid #acadaf54;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ctrlThrust:active::before, .ctrlThrust.active::before
+{
+    background: #ffffff3b;
+    transition-delay: 0s, 0.1s;
+    cursor: pointer;
+    border: 2px solid #ffffffc0;
+}
+
+.ctrlThrust::after
+{
+    content: '';
+    position: fixed;
+    top: 14px;/*13 for rightCtrl*/
+    left: 13px;/*12 for rightCtrl*/
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #fae10454;
+    border-right: 2px solid #fae10454;
+    transform: rotate(-45deg);
+    transition: 0.1s;
+    transition-delay: 0s;
+    cursor: pointer;
+}
+
+.ctrlThrust:active::after, .ctrlThrust.active::after
+{
+    /* transition-delay: 0.5s; */
+    transform: rotate(-45deg) scale(1.5);
+    cursor: pointer;
+    border-top: 2px solid #f1da04;
+    border-right: 2px solid #f1da04;
+}
+
+/* Shoot */
+
+.ctrlShoot
+{
+    position: fixed;
+    display: table;
+    margin-top: 75vh;
+    margin-left: 70vw;
+    /* padding-left: 34px;
+    padding-right: 5px; */
+    transform: scale(3);
+    visibility: hidden;
+}
+
+.ctrlShoot::before
+{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border-radius: 34px;
+    /* transition: background O.5s, width 0.5s; */
+    transition: ease-in-out 0.1s;
+    transition-delay: 0.1s 0;
+    border: 2px solid #acadaf54;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ctrlShoot:active::before, .ctrlShoot.active::before
+{
+    background: #ffffff3b;
+    transition-delay: 0s, 0.1s;
+    cursor: pointer;
+    border: 2px solid #ffffffc0;
+}
+
+.ctrlShoot::after
+{
+    content: '';
+    position: fixed;
+    top: 12px;/*13 for rightCtrl*/
+    left: 12px;/*12 for rightCtrl*/
+    width: 6px;
+    height: 6px;
+    border: 2px solid #f32e2e54;
+    border-radius: 50%;
+    background-color: #f32e2e54;
+    /* border-right: 2px solid #f32e2e54; */
+    transform: rotate(-45deg);
+    transition: 0.1s;
+    transition-delay: 0s;
+    user-select: none;
+    cursor: pointer;
+}
+
+.ctrlShoot:active::after, .ctrlShoot.active::after
+{
+    /* transition-delay: 0.5s; */
+    transform: rotate(-45deg) scale(1.5);
+    cursor: pointer;
+    border: 2px solid #ff0000;
+    /* border-right: 2px solid #ff0000; */
+}
+
+.container{
+    position: fixed;
+    width: 40%;
+    height: 40%;
+    border: 1px solid rgba(70, 66, 66, 0.664);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0e0f0f;
+    top: 50%;left: 50%;transform: translate(-50%, -50%);
+    transition: all 2s;
+    user-select: none;
+    animation: focus  0.3s ease-in-out;
+}
+
+.container:hover{
+    position: fixed;
+    width: 40%;
+    height: 40%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #141414;
+    top: 50%;left: 50%;transform: translate(-50%, -50%);
+}
+
+@keyframes focus{
+    0%{filter: blur(10px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.05);}
+    10%{filter: blur(9px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.1);}
+    20%{filter: blur(8px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.2);}
+    30%{filter: blur(7px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.3);}
+    40%{filter: blur(6px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.4);}
+    50%{filter: blur(5px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.5);}
+    60%{filter: blur(4px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.6);}
+    70%{filter: blur(3px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.7);}
+    80%{filter: blur(2px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.9);}
+    90%{filter: blur(1px);top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.9);}
+    100%{filter: none;top: 50%;left: 50%;transform: translate(-50%, -50%) scale(1);}
+}
+
+.container h1{
+    margin: 0;
+    padding: 0px;
+    color: #FFF;
+    text-align: center;
+    user-select: none;
+}
+
+.container p{
+    margin: 0;
+    padding-bottom: 20px;
+    color: #FFF;
+    text-align: center;
+    user-select: none;
+}
+
+.btn{
+    margin-top: 20px;
+    padding: 2vh 1.8vw;
+    background-color: #1179e7;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: arial;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+}
+
+/* particles style */
+#canvas1{top: 0; left: 0;width: 100%;height: 100%;}
+.game{cursor: crosshair;}
+
+/* HERE THE PLAY / PAUSE STYLE */
+.playContainer{
+    margin-left: 95vw;
+    margin-top: 3vh;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    cursor: pointer;
+    transition: all .3s;
+    cursor: pointer;
+}
+.PlayPause
+{
+    padding-top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    cursor: pointer;
+    transition: all .3s;
+    transform: scale(0.4);/*Adjust here the size of the play/pause Menu*/
+    visibility: hidden;
+}
+.play
+{
+    background-color: #ffffff;
+    display: block;
+    width: 10px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: all .3s;
+}
+.play:nth-child(2), .play:nth-child(3){height: 80px;}
+.play:nth-child(2){transform: rotate(50deg) translate(23px, 5px);}
+.play:nth-child(3){transform: rotate(125deg) translate(-15px, 21px);}
+.PlayPause.active > .play:nth-child(1){transform: scale(0);}
+.PlayPause.active > .play:nth-child(2),.PlayPause > .play:nth-child(3){padding: 3px;}
+.PlayPause.active > .play:nth-child(2){transform: rotate(0) translateX(-15px);}
+.PlayPause.active > .play:nth-child(3){transform: rotate(0);}
+
+/*Responsive codes*/        
+@media (max-width: 991px)
+{
+    *{margin: 0;padding: 0;box-sizing: border-box;user-select: none;}
+    body{overflow: hidden;background: #000; min-height: 100vh;top: 0;left: 0;width: 100%;height: 100%;user-select: none;}
+
+    .game{cursor: crosshair;}
+    /* right */
+
+    .ctrlRight
+    {
+        position: fixed;
+        display: table;
+        margin-top: 75vh;
+        margin-left: 22vw;
+        padding-left: 34px;
+        padding-right: 5px;
+        transform: scale(2);
+        visibility: hidden;
+    }
+
+    .ctrlRight::before
+    {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        border-radius: 34px;
+        /* transition: background O.5s, width 0.5s; */
+        transition: ease-in-out 0.1s;
+        transition-delay: 0.1s 0;
+        border: 2px solid #acadaf54;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .ctrlRight:active::before
+    {
+        background: #ffffff3b;
+        transition-delay: 0s, 0.1s;
+        cursor: pointer;
+        border: 2px solid #ffffffc0;
+    }
+
+    .ctrlRight::after
+    {
+        content: '';
+        position: fixed;
+        top: 13px;/*13 for rightCtrl*/
+        left: 12px;/*12 for rightCtrl*/
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #00ffff54;
+        border-right: 2px solid #00ffff54;
+        transform: rotate(45deg);
+        transition: 0.1s;
+        transition-delay: 0s;
+        cursor: pointer;
+    }
+
+    .ctrlRight:active::after
+    {
+        /* transition-delay: 0.5s; */
+        transform: rotate(45deg) scale(1.5);
+        cursor: pointer;
+        border-top: 2px solid #00ffff;
+        border-right: 2px solid #00ffff;
+    }
+
+    /* left */
+
+    .ctrlLeft
+    {
+        position: fixed;
+        display: table;
+        margin-top: 75vh;
+        margin-left: 5vw;
+        /* padding-left: 34px;
+        padding-right: 5px; */
+        transform: scale(2);
+        visibility: hidden;
+    }
+
+    .ctrlLeft::before
+    {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        border-radius: 34px;
+        /* transition: background O.5s, width 0.5s; */
+        transition: ease-in-out 0.1s;
+        transition-delay: 0.1s 0;
+        border: 2px solid #acadaf54;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .ctrlLeft:active::before
+    {
+        background: #ffffff3b;
+        transition-delay: 0s, 0.1s;
+        cursor: pointer;
+        border: 2px solid #ffffffc0;
+    }
+
+    .ctrlLeft::after
+    {
+        content: '';
+        position: fixed;
+        top: 13px;/*13 for rightCtrl*/
+        left: 14px;/*12 for rightCtrl*/
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #00ffff54;
+        border-right: 2px solid #00ffff54;
+        transform: rotate(225deg);
+        transition: 0.1s;
+        transition-delay: 0s;
+        cursor: pointer;
+    }
+
+    .ctrlLeft:active::after
+    {
+        /* transition-delay: 0.5s; */
+        transform: rotate(225deg) scale(1.5);
+        cursor: pointer;
+        border-top: 2px solid #00ffff;
+        border-right: 2px solid #00ffff;
+    }
+
+    /* Thrust */
+
+    .ctrlThrust
+    {
+        position: fixed;
+        display: table;
+        margin-top: 55vh;
+        margin-left: 85vw;
+        /* padding-left: 34px;
+        padding-right: 5px; */
+        transform: scale(2);
+        visibility: hidden;
+    }
+
+    .ctrlThrust::before
+    {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        border-radius: 34px;
+        /* transition: background O.5s, width 0.5s; */
+        transition: ease-in-out 0.1s;
+        transition-delay: 0.1s 0;
+        border: 2px solid #acadaf54;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .ctrlThrust:active::before
+    {
+        background: #ffffff3b;
+        transition-delay: 0s, 0.1s;
+        cursor: pointer;
+        border: 2px solid #ffffffc0;
+    }
+
+    .ctrlThrust::after
+    {
+        content: '';
+        position: fixed;
+        top: 14px;/*13 for rightCtrl*/
+        left: 13px;/*12 for rightCtrl*/
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #fae10454;
+        border-right: 2px solid #fae10454;
+        transform: rotate(-45deg);
+        transition: 0.1s;
+        transition-delay: 0s;
+        cursor: pointer;
+    }
+
+    .ctrlThrust:active::after
+    {
+        /* transition-delay: 0.5s; */
+        transform: rotate(-45deg) scale(1.5);
+        cursor: pointer;
+        border-top: 2px solid #f1da04;
+        border-right: 2px solid #f1da04;
+    }
+
+    /* Shoot */
+
+    .ctrlShoot
+    {
+        position: fixed;
+        display: table;
+        margin-top: 75vh;
+        margin-left: 70vw;
+        /* padding-left: 34px;
+        padding-right: 5px; */
+        transform: scale(2);
+        visibility: hidden;
+    }
+
+    .ctrlShoot::before
+    {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        border-radius: 34px;
+        /* transition: background O.5s, width 0.5s; */
+        transition: ease-in-out 0.1s;
+        transition-delay: 0.1s 0;
+        border: 2px solid #acadaf54;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .ctrlShoot:active::before
+    {
+        background: #ffffff3b;
+        transition-delay: 0s, 0.1s;
+        cursor: pointer;
+        border: 2px solid #ffffffc0;
+    }
+
+    .ctrlShoot::after
+    {
+        content: '';
+        position: fixed;
+        top: 12px;/*13 for rightCtrl*/
+        left: 12px;/*12 for rightCtrl*/
+        width: 6px;
+        height: 6px;
+        border: 2px solid #f32e2e54;
+        border-radius: 50%;
+        background-color: #f32e2e54;
+        /* border-right: 2px solid #f32e2e54; */
+        transform: rotate(-45deg);
+        transition: 0.1s;
+        transition-delay: 0s;
+        cursor: pointer;
+    }
+
+    .ctrlShoot:active::after
+    {
+        /* transition-delay: 0.5s; */
+        transform: rotate(-45deg) scale(1.5);
+        cursor: pointer;
+        border: 2px solid #ff0000;
+        /* border-right: 2px solid #ff0000; */
+    }
+
+    .container h1{
+        font-size: 25px;
+        margin: 0;
+        padding: 0px;
+        color: #FFF;
+        text-align: center;
+        user-select: none;
+    }
+
+    .container p{
+        font-size: 15px;
+        margin: 0;
+        padding-bottom: 20px;
+        color: #FFF;
+        text-align: center;
+        user-select: none;
+    }
+
+    .btn{
+        font-size: 15px;
+        margin-top: 2px;
+        padding: 2vh 1.8vw;
+        background-color: #1179e7;
+        border: none;
+        border-radius: 25px;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: arial;
+        user-select: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        user-select: none;
+    }
+
+    /* HERE THE PLAY / PAUSE STYLE */
+    .playContainer{
+        margin-left: 93vw;
+        margin-top: 0.8vh;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        cursor: pointer;
+        transition: all .3s;
+        cursor: pointer;
+    }
+    .PlayPause
+    {
+        padding-top: 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        cursor: pointer;
+        transition: all .3s;
+        transform: scale(0.25);/*Adjust here the size of the play/pause Menu*/
+        visibility: hidden;
+    }
+    .play
+    {
+        background-color: #ffffff;
+        display: block;
+        width: 10px;
+        height: 100px;
+        margin-right: 10px;
+        border-radius: 10px;
+        transition: all .3s;
+    }
+    .play:nth-child(2), .play:nth-child(3){height: 80px;}
+    .play:nth-child(2){transform: rotate(50deg) translate(23px, 5px);}
+    .play:nth-child(3){transform: rotate(125deg) translate(-15px, 21px);}
+    .PlayPause.active > .play:nth-child(1){transform: scale(0);}
+    .PlayPause.active > .play:nth-child(2),.PlayPause > .play:nth-child(3){padding: 3px;}
+    .PlayPause.active > .play:nth-child(2){transform: rotate(0) translateX(-15px);}
+    .PlayPause.active > .play:nth-child(3){transform: rotate(0);}
+}

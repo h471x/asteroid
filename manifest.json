@@ -1,0 +1,8 @@
+{
+  "name": "Asteroid",
+  "short_name": "Asteroid",
+  "start_url": "/asteroid/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000"
+}

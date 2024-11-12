@@ -1,10 +1,10 @@
 const CACHE_NAME = 'asteroid';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/game.js',
-  '/particles.js',
+  '/asteroid',
+  '/asteroid/index.html',
+  '/asteroid/css/style.css',
+  '/asteroid/js/game/game.js',
+  '/asteroid/js/game/particles.js',
 ];
 
 self.addEventListener('install', (event) => {
